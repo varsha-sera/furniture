@@ -1,0 +1,35 @@
+.storypage{
+/* background: url('../../assets/Images/dining_table_1.3.jpg') no-repeat; */
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../assets/Images/dining_table_1.3.jpg');
+align-items: center;
+background-size: cover;
+padding-top: 120px;
+padding-bottom: 120px;
+padding-left: 50px;
+padding-right: 50px;
+
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content h1{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+}
+.content p{
+  font-size: 14px;
+  color: var(--white);
+}
+
+.content .btn{
+  background-color: transparent;
+  outline: 2px solid white;
+  color: var(--white);
+  padding: 5px;
+}
