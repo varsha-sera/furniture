@@ -1,11 +1,11 @@
 /* .carousel-item img
 {
-  opacity: 0.9;
   height: 100%;
 } */
 
-.carousel-inner{
-  height: 500px;
+.carousel-inner img{
+  height: 600px;
+  width: 100px;
   position: relative;
 }
 .content{

@@ -14,6 +14,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     AboutUsComponent,
     SignupComponent,
     SigninComponent,
-    HomeComponent
+    HomeComponent,
+    ViewDetailsComponent
   ],
   imports: [
     BrowserModule,

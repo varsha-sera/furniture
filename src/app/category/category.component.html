@@ -10,7 +10,7 @@
         </div>
         <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">49,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>39,000</span></li>
         <div class="card-body">
-          <a href="#" class="card-link">View Details</a>
+          <a routerLink="/view-details" (click)="open()"class="card-link">View Details</a>
         </div>
 
       </div>
@@ -81,3 +81,5 @@
   </div>
 
 </section>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,17 @@
+/* .viewimg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.Description .space{
+   margin-right: 20px!important;
+}
+.Description .sendbtn{
+
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  float: right;
+  font-size: 14px;
+}
+
