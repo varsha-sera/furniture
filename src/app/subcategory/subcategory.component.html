@@ -1,0 +1,16 @@
+<app-header></app-header>
+<section class="category mt-5">
+  <h1>POPULAR CATEGORY</h1>
+  <div class="row justify-content-around" style="width: 80%; margin: auto; margin-bottom: 40px;">
+    <div class="col-md-4 mt-5" *ngFor="let product of products">
+      <div class="card" >
+        <img [src]="product.pImage" height="170px">
+        <div class="card-body">
+          <h5 class="card-title">{{product.pName}}</h5>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>

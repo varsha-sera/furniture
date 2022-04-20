@@ -7,16 +7,18 @@ import { HomeComponent } from './home/home.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
+  {path:'',component:HomeComponent},
   {path : 'aboutus',component:AboutUsComponent},
   {path:'singin',component:SigninComponent},
   {path:'singup',component:SignupComponent},
   {path : 'viewdetails/:productId',component:ViewDetailsComponent},
   {path : 'mycart',component : MycartComponent},
-  { path :'checkoutpage',component:CheckoutpageComponent}
+  { path :'checkoutpage',component:CheckoutpageComponent},
+  {path : 'subcategory',component:SubcategoryComponent}
 ];
 
 @NgModule({
