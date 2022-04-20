@@ -9,6 +9,11 @@ export class CheckoutpageComponent implements OnInit {
 
   constructor() { }
 
+  orderplaced()
+  {
+    window.alert("Your order is placed successfully ..!!");
+  }
+
   ngOnInit(): void {
   }
 

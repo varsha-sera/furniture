@@ -13,7 +13,7 @@ export class MycartComponent implements OnInit {
   reject() {
 
     window.confirm('Are you sure to remove this item ?');
-    // this.router.navigate(['mycart']);
+    
   }
 
   placeOrder(){

@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
+import { FavComponent } from './fav/fav.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MycartComponent } from './mycart/mycart.component';
@@ -17,6 +19,7 @@ const routes: Routes = [
   {path:'singup',component:SignupComponent},
   {path : 'viewdetails/:productId',component:ViewDetailsComponent},
   {path : 'mycart',component : MycartComponent},
+  {path: 'wishlist',component: FavComponent},
   { path :'checkoutpage',component:CheckoutpageComponent},
   {path : 'subcategory',component:SubcategoryComponent}
 ];
