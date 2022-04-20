@@ -18,6 +18,7 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserViewComponent } from './user-view/user-view.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ViewDetailsComponent,
     MycartComponent,
-    CheckoutpageComponent
+    CheckoutpageComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,
