@@ -15,6 +15,9 @@ import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ViewDetailsComponent } from './view-details/view-details.component';
+import { MycartComponent } from './mycart/mycart.component';
+import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,15 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
     SignupComponent,
     SigninComponent,
     HomeComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    MycartComponent,
+    CheckoutpageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

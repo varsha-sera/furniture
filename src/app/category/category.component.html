@@ -2,84 +2,20 @@
   <h1>POPULAR PRODUCT</h1>
   <h5>Check out our latest collections</h5>
   <div class="row justify-content-around" style="width: 80%; margin: auto; margin-bottom: 40px;">
-    <div class="col-md-3">
+    <div class="col-md-4 mt-5" *ngFor="let product of products">
       <div class="card" >
-        <img src="../../assets/Images/sofa_image_2.jpg " height="170px">
+        <img [src]="product.pImage" height="170px">
         <div class="card-body">
-          <h5 class="card-title">Navi Valvet Sofas</h5>
+          <h5 class="card-title">{{product.pName}}</h5>
         </div>
-        <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">49,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>39,000</span></li>
+        <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">49,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>{{product.pPrice}}</span></li>
         <div class="card-body">
-          <a routerLink="/view-details" (click)="open()"class="card-link">View Details</a>
+          <a routerLink="/viewdetails/{{product._id}}" class="card-link">View Details</a>
         </div>
 
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="../../assets/Images/bed_1.jpg" height="170px">
-        <div class="card-body">
-          <h5 class="card-title">Stanhope Strorage Bed</h5>
-        </div>
-          <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">49,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>39,000</span></li>
-        <div class="card-body">
-          <a href="#" class="card-link">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="../../assets/Images/kichan_image_1.jpg" height="170px">
-        <div class="card-body">
-          <h5 class="card-title">Modular Kitchan</h5>
-        </div>
-          <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">4,00,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>3,00,000</span></li>
-        <div class="card-body">
-          <a href="#" class="card-link">View Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row justify-content-around" style="width: 80%; margin: auto;">
-    <div class="col-md-3">
-      <div class="card" >
-        <img src="../../assets/Images/bookcase_1.jpg" height="170px">
-        <div class="card-body">
-          <h5 class="card-title">Carleson Wood Book Case</h5>
-        </div>
-        <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">46,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>40,000</span></li>
-        <div class="card-body">
-          <a href="#" class="card-link">View Details</a>
-        </div>
 
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="../../assets/Images/office_furniture_3.jpg" height="170px">
-        <div class="card-body">
-          <h5 class="card-title">Office  Table & Chair</h5>
-        </div>
-          <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">35,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>25,000</span></li>
-        <div class="card-body">
-          <a href="#" class="card-link">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card">
-        <img src="../../assets/Images/wardrobe_1.jpg" height="170px">
-        <div class="card-body">
-          <h5 class="card-title">Wardrobe</h5>
-        </div>
-          <li class="list-group-item size"><span><i class="fa-solid fa-indian-rupee-sign"></i><del style="color: red;">40,000</del></span><span style="padding-left:10px;"><i class="fa-solid fa-indian-rupee-sign"></i>30,000</span></li>
-        <div class="card-body">
-          <a href="#" class="card-link">View Details</a>
-        </div>
-      </div>
-    </div>
   </div>
 
 </section>
-<router-outlet></router-outlet>
-

@@ -1,5 +1,5 @@
 
-<header>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="../../assets/Images/logo1.png" width="100px" height="50px"></a>
@@ -27,22 +27,13 @@
           <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-search icon" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa fa-shopping-cart icon" aria-hidden="true"></i></a>
+          <a class="nav-link" (click)="open()"><i class="fa fa-shopping-cart icon" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"><i class="fa fa-heart icon" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
           <a  class="nav-link" routerLink="/singin">SignIn</a>
-
-          <!-- <a class="nav-link" routerLink="/singin"><i class="fa fa-user icon" aria-hidden="true"></i>SignIn</a> -->
-          <!-- <div class="dropdown">
-            <a class="nav-link" routerLink="/singin"><i class="fa fa-user icon" aria-hidden="true"></i></a>
-            <div class="dropdown-content">
-              <a routerLink="/singin">SignIn</a>
-              <a routerLink="/singup">SignUp</a>
-            </div>
-          </div> -->
         </li>
         <li class="nav-item">
           <a  class="nav-link" routerLink="/singup">SignUp</a>
@@ -51,5 +42,5 @@
     </div>
   </div>
 </nav>
-</header>
+
 <router-outlet></router-outlet>

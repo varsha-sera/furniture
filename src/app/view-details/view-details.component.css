@@ -15,3 +15,8 @@
   font-size: 14px;
 }
 
+.Description .comments{
+  flex-direction: column;
+
+}
+
