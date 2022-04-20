@@ -19,6 +19,7 @@ import { MycartComponent } from './mycart/mycart.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
+import { FavComponent } from './fav/fav.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SubcategoryComponent } from './subcategory/subcategory.component';
     ViewDetailsComponent,
     MycartComponent,
     CheckoutpageComponent,
-    SubcategoryComponent
+    SubcategoryComponent,
+    FavComponent
   ],
   imports: [
     BrowserModule,
