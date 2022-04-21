@@ -9,10 +9,10 @@
 
       <div class="header-text">
           Login Form
-      </div><input placeholder="Your Email Address" type="text"> <input placeholder="Your Password" type="password">
+      </div><input [(ngModel)]="email" placeholder="Your Email Address" type="text"> <input [(ngModel)]="password" placeholder="Your Password" type="password">
       <input id="terms" type="checkbox"> <label for="terms"></label><span>Agree with <a href="#">Terms &
               Conditions</a>
-      </span> <button>login</button>
+      </span> <button (click)="signindata()">login</button>
     </div>
   </div>
   <div class="col md-4"></div>

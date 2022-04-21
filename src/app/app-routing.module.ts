@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AuthGuard } from './auth.guard';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { FavComponent } from './fav/fav.component';
@@ -19,10 +20,10 @@ const routes: Routes = [
   {path:'contactus',component:ContactpageComponent},
   {path:'singin',component:SigninComponent},
   {path:'singup',component:SignupComponent},
-  {path : 'viewdetails/:productId',component:ViewDetailsComponent},
-  {path : 'mycart',component : MycartComponent},
+  {path : 'viewdetails/:productId',component:ViewDetailsComponent,canActivate:[AuthGuard]},
+  {path : 'mycart',component : MycartComponent,canActivate:[AuthGuard]},
+  { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]}
   {path: 'wishlist',component: FavComponent},
-  { path :'checkoutpage',component:CheckoutpageComponent},
   {path : 'subcategory',component:SubcategoryComponent}
 ];
 

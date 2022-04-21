@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './services/user.service';
 
 
 @Component({
@@ -8,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'furnitureapp';
+  constructor(private data:UserService){
+
+  }
+  isLoggedIn():Boolean{
+    if(this.data.checktoken())
+      return true;
+
+    else
+    return false;
+    
+  }
 }
