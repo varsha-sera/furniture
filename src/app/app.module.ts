@@ -20,6 +20,7 @@ import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { FavComponent } from './fav/fav.component';
+import { ContactpageComponent } from './contactpage/contactpage.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FavComponent } from './fav/fav.component';
     MycartComponent,
     CheckoutpageComponent,
     SubcategoryComponent,
-    FavComponent
+    FavComponent,
+    ContactpageComponent
   ],
   imports: [
     BrowserModule,
