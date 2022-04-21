@@ -15,9 +15,12 @@ export class UserService {
     return this._http.get<any>(this.userApiUrl1);
   }
   userSignUp(name:any,email:any,password:any){
-    this._http.post<any>(this.userApiUrl2,{uname:name,uemail:email,upassword:password});
+    return this._http.post<any>(this.userApiUrl2,{uname:name,uemail:email,upassword:password});
   }
   userSignIn(email:any,password:any){
-    this._http.post<any>(this.userApiUrl3,{uemail:email,upassword:password});
+    return this._http.post<any>(this.userApiUrl3,{uemail:email,upassword:password});
+  }
+  checktoken():boolean{
+    return !!localStorage.getItem('jwt-token');
   }
 }
