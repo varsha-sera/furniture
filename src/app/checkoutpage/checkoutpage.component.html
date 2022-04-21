@@ -1,1 +1,32 @@
-<p>checkoutpage works!</p>
+<div class="container mt-5">
+  <div class="row box">
+    <h3 style="text-align: center;">Price Details</h3>
+    <hr>
+    <div class="col md-6">
+      <p>Price (1 item)<span style="margin-left: 50px;"><i class="fa-solid fa-indian-rupee-sign"></i>39,000</span></p>
+      <p>Discount<span style="margin-left: 50px;">20%</span></p>
+      <p>Delivery Charges <span style="margin-left: 50px; color: red; font-weight: bold;"> FREE</span></p>
+
+      <p>Total Amount<span style="margin-left: 50px;"><i class="fa-solid fa-indian-rupee-sign"></i>39,000</span></p>
+      <p>......................................................</p>
+      <p >Please select your payment mode</p>
+      <input type="radio"  name="payment" value="Cash on delivery">
+      <label style="margin-left: 5px;" >Cash on delivery</label><br>
+      <input type="radio"name="payment" value="EMI">
+      <label style="margin-left: 5px;" >EMI</label><br>
+      <input type="radio"  name="payment" value="Online">
+      <label style="margin-left: 5px;">Online</label><br><br>
+      <input type="button" (click)="orderplaced()" class="btn btn-outline-primary" value="Place Order">
+
+    </div>
+
+    <div class="col md-6 box">
+       <label >Please enter your mobile no</label>
+       <input type="number" class="form-control">
+       <label style="margin-top: 15px;">Please enter your email</label>
+       <input type="email" class="form-control">
+       <label  style="margin-top: 15px;">Please enter your delivery address</label>
+       <input type="text" class="form-control">
+    </div>
+  </div>
+</div>
