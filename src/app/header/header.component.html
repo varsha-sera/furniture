@@ -19,7 +19,7 @@
           <a class="nav-link" routerLink="/contactus">Contact us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/subcategory">Category</a>
+          <a class="nav-link" *ngIf="isLoggedIn()" routerLink="/subcategory">Category</a>
         </li>
       </ul>
 
@@ -34,10 +34,13 @@
           <a class="nav-link" routerLink="/wishlist"><i class="fa fa-heart icon" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
-          <a  class="nav-link" routerLink="/singin">SignIn</a>
+          <a  class="nav-link" *ngIf="!isLoggedIn()" routerLink="/singin">SignIn</a>
         </li>
         <li class="nav-item">
-          <a  class="nav-link" routerLink="/singup">SignUp</a>
+          <a  class="nav-link" *ngIf="isLoggedIn()" (click)="signout()">SignOut</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" *ngIf="!isLoggedIn()" routerLink="/singup">SignUp</a>
         </li>
       </ul>
     </div>

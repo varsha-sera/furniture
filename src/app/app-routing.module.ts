@@ -22,9 +22,9 @@ const routes: Routes = [
   {path:'singup',component:SignupComponent},
   {path : 'viewdetails/:productId',component:ViewDetailsComponent,canActivate:[AuthGuard]},
   {path : 'mycart',component : MycartComponent,canActivate:[AuthGuard]},
-  { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]}
+  { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]},
   {path: 'wishlist',component: FavComponent},
-  {path : 'subcategory',component:SubcategoryComponent}
+  {path : 'subcategory',component:SubcategoryComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({
