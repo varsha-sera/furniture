@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ViewDetailsComponent implements OnInit {
 
-  constructor(private router:Router,private activateRoute:ActivatedRoute,private pro:ProductService) { }
+  constructor(private router:Router,private activateRoute:ActivatedRoute,private pro:ProductService,private cartService:CartService) { }
 
 
   id!:any;
@@ -21,5 +22,13 @@ export class ViewDetailsComponent implements OnInit {
     });
 
   }
+
+  addCart(pro_id:any,user_id:any){
+    this.cartService.addCart(pro_id,user_id).subscribe(data=>{
+      window.alert("Added To Cart...");
+    });
+  }
+
+  addWhishlist(pro_id:any,user_id:any){}
 
 }

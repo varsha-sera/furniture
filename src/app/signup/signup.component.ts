@@ -13,7 +13,10 @@ export class SignupComponent implements OnInit {
 
   constructor(private data:UserService) { }
   signupdata(){
-    this.data.userSignUp(this.name,this.email,this.password)
+    this.data.userSignUp(this.name,this.email,this.password).subscribe(data=>{
+      window.alert("signup successs......");
+      console.log(data);
+    });
   }
   ngOnInit(): void {
   }
