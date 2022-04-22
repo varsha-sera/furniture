@@ -20,10 +20,10 @@ const routes: Routes = [
   {path:'contactus',component:ContactpageComponent},
   {path:'singin',component:SigninComponent},
   {path:'singup',component:SignupComponent},
-  {path : 'viewdetails/:productId',component:ViewDetailsComponent,canActivate:[AuthGuard]},
-  {path : 'mycart',component : MycartComponent,canActivate:[AuthGuard]},
-  { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]}
-  {path: 'wishlist',component: FavComponent},
+  {path : 'viewdetails/:productId',component:ViewDetailsComponent,canActivate:[AuthGuard]},//guard
+  {path : 'mycart',component : MycartComponent,canActivate:[AuthGuard]},//guard
+  { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]},
+  {path: 'wishlist',component: FavComponent,canActivate:[AuthGuard]},
   {path : 'subcategory',component:SubcategoryComponent}
 ];
 
