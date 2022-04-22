@@ -25,6 +25,7 @@ const routes: Routes = [
   { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]},
   {path: 'wishlist',component: FavComponent},
   {path : 'subcategory',component:SubcategoryComponent,canActivate:[AuthGuard]}
+
 ];
 
 @NgModule({
