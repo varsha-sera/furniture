@@ -23,6 +23,9 @@ header{
 nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   padding: 0;
 }
+div#navbarSupportedContent {
+  padding: 10px;
+}
 header .navbar a{
   font-size: 14px;
   margin: 4px;

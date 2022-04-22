@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { FavComponent } from './fav/fav.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
     CheckoutpageComponent,
     SubcategoryComponent,
     FavComponent,
-    ContactpageComponent
+    ContactpageComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

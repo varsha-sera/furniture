@@ -8,6 +8,7 @@ import { FavComponent } from './fav/fav.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MycartComponent } from './mycart/mycart.component';
+import { SearchComponent } from './search/search.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path : 'viewdetails/:productId',component:ViewDetailsComponent},
   {path : 'mycart',component : MycartComponent},
   {path: 'wishlist',component: FavComponent},
+  {path:'search',component:SearchComponent},
   { path :'checkoutpage',component:CheckoutpageComponent},
   {path : 'subcategory',component:SubcategoryComponent}
 ];
