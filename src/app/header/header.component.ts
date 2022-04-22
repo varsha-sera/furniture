@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router:Router) { }
+  constructor(private router:Router,private data:UserService) { }
 
   open(){
     this.router.navigate(['mycart']);
   }
   ngOnInit(): void {
+  }
+  isLoggedIn():Boolean{
+    if(this.data.checktoken())
+      return true;
+
+    else
+    return false;
+    
+  }
+  signout(){
+    localStorage.removeItem('jwt-token');
   }
 
 }
