@@ -12,12 +12,5 @@ export class AppComponent {
   constructor(private data:UserService){
 
   }
-  isLoggedIn():Boolean{
-    if(this.data.checktoken())
-      return true;
-
-    else
-    return false;
-    
-  }
+  
 }

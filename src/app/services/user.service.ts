@@ -18,7 +18,7 @@ export class UserService {
     return this._http.post<any>(this.userApiUrl2,{uname:name,uemail:email,upassword:password});
   }
   userSignIn(email:any,password:any){
-    return this._http.post<any>(this.userApiUrl3,{uemail:email,upassword:password});
+    return this._http.post<any>(this.userApiUrl3,{email:email,password:password});
   }
   checktoken():boolean{
     return !!localStorage.getItem('jwt-token');
