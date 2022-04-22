@@ -18,10 +18,12 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserViewComponent } from './user-view/user-view.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { FavComponent } from './fav/fav.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { SearchComponent } from './search/search.component';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { SearchComponent } from './search/search.component';
     ViewDetailsComponent,
     MycartComponent,
     CheckoutpageComponent,
+    UserViewComponent,
     SubcategoryComponent,
     FavComponent,
     ContactpageComponent,
