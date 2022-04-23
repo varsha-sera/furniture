@@ -7,6 +7,7 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
 import { FavComponent } from './fav/fav.component';
 import { HomeComponent } from './home/home.component';
 import { MycartComponent } from './mycart/mycart.component';
+import { SearchComponent } from './search/search.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path : 'mycart',component : MycartComponent,canActivate:[AuthGuard]},//guard
   { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]},
   {path: 'wishlist',component: FavComponent,canActivate:[AuthGuard]},
-  {path : 'subcategory',component:SubcategoryComponent}
+  {path : 'subcategory',component:SubcategoryComponent},
+  {path: 'search',component:SearchComponent}
 ];
 
 @NgModule({
