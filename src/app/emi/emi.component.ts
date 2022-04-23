@@ -21,6 +21,7 @@ export class EmiComponent implements OnInit {
   }
 
   submit(intrest:any,downpayment:any){
+    let userId=localStorage.getItem('userId')
     this.emiService.addEmi(intrest,downpayment,this.totalPrice).subscribe(data =>{
       window.alert("Emi Success...");
     });
