@@ -15,11 +15,11 @@
 
   </div>
   <div class="col-sm-4 mt-3 Description">
-    <button type="button" class="btn btn-success space" style="padding: 10px; font-size: 14px;" (click)="addCart(product[0]._id,'624b3c7ec0f4e6780015cdcc')"><span style="margin-right: 10px;"><i class="fa-solid fa-cart-shopping"></i></span >ADD TO CART</button>
-      <button type="button" class="btn btn-danger" style="padding: 10px; font-size: 14px;" (click)="addWhishlist(product[0]._id,'624b3c7ec0f4e6780015cdcc')"><span style="margin-right: 10px;"><i class="fa fa-heart icon"></i></span >FAVORITE</button>
+    <button type="button" class="btn btn-success space" style="padding: 10px; font-size: 14px;" (click)="addCart(product[0]._id)"><span style="margin-right: 10px;"><i class="fa-solid fa-cart-shopping"></i></span >ADD TO CART</button>
+      <button type="button" class="btn btn-danger" style="padding: 10px; font-size: 14px;" (click)="addWhishlist(product[0]._id)"><span style="margin-right: 10px;"><i class="fa fa-heart icon"></i></span >FAVORITE</button>
       <!-- <a class="nav-link" href="#"><i class="fa fa-shopping-cart icon " aria-hidden="true"></i><span >ADD TO CART</span></a>
       <a class="nav-link" href="#"><i class="fa fa-heart icon" aria-hidden="true"></i><span>ADD TO FAVORITE</span></a> -->
-      <h4 class="mt-3"><span style="margin-right: 20px;">{{product[0].pDiscount}}%</span> {{product[0].pOffers}}</h4>
+      <h4 class="mt-3"><span style="margin-right: 20px;">Discount : {{product[0].pDiscount}}%</span> <br><br>Offer : {{product[0].pOffers}}</h4>
       <h6 class="mt-3">MRP<span><del style="color: red;">49,000</del></span></h6>
       <h5 class="mt-3"><span><i class="fa-solid fa-indian-rupee-sign"></i>{{product[0].pPrice}}</span></h5>
       <p>(including of all taxes)</p>
