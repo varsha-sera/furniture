@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import{
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+} from 'angularx-social-login';
+
+import { GoogleLoginProvider } from 'angularx-social-login';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,7 +20,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
@@ -24,6 +31,7 @@ import { FavComponent } from './fav/fav.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { SearchComponent } from './search/search.component';
 import { EmiComponent } from './emi/emi.component';
+
 
 
 @NgModule({
@@ -53,9 +61,24 @@ import { EmiComponent } from './emi/emi.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SocialLoginModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('570476200199-tbdjic3o1i0fjs86pjnul8mi3tgnc3s9.apps.googleusercontent.com'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
