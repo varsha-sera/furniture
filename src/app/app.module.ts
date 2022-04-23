@@ -23,6 +23,7 @@ import { SubcategoryComponent } from './subcategory/subcategory.component';
 import { FavComponent } from './fav/fav.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { SearchComponent } from './search/search.component';
+import { EmiComponent } from './emi/emi.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { SearchComponent } from './search/search.component';
     SubcategoryComponent,
     FavComponent,
     ContactpageComponent,
-    SearchComponent
+    SearchComponent,
+    EmiComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthGuard } from './auth.guard';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
+import { EmiComponent } from './emi/emi.component';
 import { FavComponent } from './fav/fav.component';
 import { HomeComponent } from './home/home.component';
 import { MycartComponent } from './mycart/mycart.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path : 'mycart',component : MycartComponent,canActivate:[AuthGuard]},//guard
   { path :'checkoutpage',component:CheckoutpageComponent,canActivate:[AuthGuard]},
   {path: 'wishlist',component: FavComponent,canActivate:[AuthGuard]},
-  {path : 'subcategory',component:SubcategoryComponent}
+  {path : 'subcategory',component:SubcategoryComponent},
+  {path : 'emi',component:EmiComponent},
 ];
 
 @NgModule({

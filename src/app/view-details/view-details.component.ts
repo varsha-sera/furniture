@@ -23,12 +23,14 @@ export class ViewDetailsComponent implements OnInit {
 
   }
 
-  addCart(pro_id:any,user_id:any){
+  addCart(pro_id:any){
+    let user_id=localStorage.getItem('id');
     this.cartService.addCart(pro_id,user_id).subscribe(data=>{
       window.alert("Added To Cart...");
+      console.log(data);
     });
   }
 
-  addWhishlist(pro_id:any,user_id:any){}
+  addWhishlist(pro_id:any){}
 
 }
