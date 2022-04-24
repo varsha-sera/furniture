@@ -15,6 +15,7 @@ export class EmiService {
 
   placeOrder(mobile:any,address:any,email:any,quantity: any,amount:any,emi:any,productid:any){
     let userId=localStorage.getItem('id');
+    console.log(userId);
     return this.http.post("https://furniture-v1-app.herokuapp.com/api/order/order",{userId:userId,mobileNo:mobile,shippingAddress:address,orderQuantity:quantity,totalAmount:amount,orderPayment:emi,productId:productid});
   }
 }

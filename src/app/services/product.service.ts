@@ -16,4 +16,9 @@ export class ProductService {
     console.log("ID : " + id);
     return this.http.get("https://furniture-v1-app.herokuapp.com/api/product/getproduct/"+id);
   }
+
+  getProducts(id:any){
+    return this.http.get("https://furniture-v1-app.herokuapp.com/product/productsbycat/"+id);
+
+  }
 }

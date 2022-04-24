@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WhishlistService } from '../services/whishlist.service';
 
 @Component({
   selector: 'app-fav',
@@ -7,14 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private whishlistService:WhishlistService) { }
   reject() {
 
     window.confirm('Are you sure to remove this item ?');
 
   }
 
+  products:any;
   ngOnInit(): void {
+    this.whishlistService.getProducts().subscribe(data => {
+      this.products=data;
+    });
   }
 
 }

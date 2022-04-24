@@ -17,6 +17,8 @@ export class SigninComponent implements OnInit {
           console.log(data1);
           alert('SignIn Success');
           localStorage.setItem('jwt-token',data1.token);
+          localStorage.setItem('id',data1.result._id);
+          console.log(data1.result._id);
           this.router.navigate(['/subcategory']);
 
         }

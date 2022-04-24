@@ -20,11 +20,9 @@
        <input [(ngModel)]="password" required #pass="ngModel" placeholder="Your Password" type="password">
        <span class="text-danger" *ngIf="pass.errors?.required && pass.touched">Password is required</span>
 
-     <button (click)="signupdata()">Register</button>
-     <p style="text-align: center; color: white; font-weight: bold;">OR</p>
-     <div>
-       <button type="button" (click)="loginwithGoogle()" class="btn btn-outline-primary">Login with Google</button>
-     </div>
+      <input id="terms" type="checkbox"> <label for="terms"></label><span>Agree with <a href="#" style="justify-content: space-around;">Terms &
+              Conditions</a>
+      </span> <button (click)="signupdata()">login</button>
     </div>
   </div>
   <div class="col md-4"></div>

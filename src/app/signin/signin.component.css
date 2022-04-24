@@ -92,15 +92,15 @@
 }
 
 .form-box button {
- background-color: deepskyblue;
- color: #fff;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- width: 100%;
- font-size: 18px;
- padding: 10px;
- margin: 20px 0px;
+  background-color: deepskyblue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  padding: 10px;
+  margin: 20px 0px;
 }
 
 span a {
@@ -115,7 +115,7 @@ span a {
    .row .box .form-box {
     width: 200%;
     height: 230%;
-
+    
   }
 
 

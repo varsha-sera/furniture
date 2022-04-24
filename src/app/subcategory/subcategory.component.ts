@@ -22,6 +22,8 @@ export class SubcategoryComponent implements OnInit {
    });
   }
 
+  
+
 }
 
 

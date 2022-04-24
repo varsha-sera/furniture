@@ -13,7 +13,7 @@
    left: 50%;
    transform: translate(-50%, -50%);
    width: 400px;
-   height: 550px;
+   height: 500px;
    -webkit-transform: translate(-50%, -50%);
    -moz-transform: translate(-50%, -50%);
    -ms-transform: translate(-50%, -50%);
@@ -114,7 +114,6 @@
    .row .box .form-box {
     width: 200%;
     height: 250%;
-    margin-top: 30px;
   }
 
 
