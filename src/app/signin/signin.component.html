@@ -5,13 +5,21 @@
 <div class="row">
   <div class="col md-4"></div>
   <div class="col md-4 box">
+
+
     <div class="form-box">
 
       <div class="header-text">
                 Login Form
-      </div><input [(ngModel)]="email" placeholder="Your Email Address" type="text"> <input [(ngModel)]="password" placeholder="Your Password" type="password">
+      </div>
 
-      <button (click)="signindata()">Login</button>
+        <input [(ngModel)]="email" required #emailid="ngModel" placeholder="Your Email Address" type="email">
+        <span class="text-danger" *ngIf="emailid.errors?.required && emailid.touched">Email is required</span>
+
+        <input [(ngModel)]="password" required #passwords="ngModel" placeholder="Your Password" type="password">
+        <span class="text-danger" *ngIf="passwords.errors?.required && passwords.touched">Password is required</span>
+
+      <button  [disabled]="emailid.errors" (click)="signindata()">Login</button>
 
     </div>
   </div>

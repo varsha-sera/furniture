@@ -30,6 +30,7 @@ export class SignupComponent implements OnInit {
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
     .then(result=>{
       console.log(result);
+      console.log(result.id+" "+result.name);
       this.router.navigate(['subcategory']);
     }).catch();
   }

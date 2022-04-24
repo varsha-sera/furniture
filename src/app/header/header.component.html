@@ -36,10 +36,10 @@
 
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="open()"><i class="fa fa-shopping-cart icon" aria-hidden="true"></i></a>
+          <a class="nav-link" (click)="open()"  style="justify-content: space-around; color: blue;"><i class="fa fa-shopping-cart icon" aria-hidden="true"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/wishlist" style="justify-content: space-around;"><i class="fa fa-heart icon" aria-hidden="true" ></i></a>
+          <a class="nav-link" routerLink="/wishlist" style="justify-content: space-around; color: red;"><i class="fa fa-heart icon" aria-hidden="true" ></i></a>
         </li>
         <li class="nav-item">
           <a  class="nav-link" *ngIf="!isLoggedIn()" routerLink="/singin">SignIn</a>
