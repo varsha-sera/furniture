@@ -24,6 +24,7 @@ import { FavComponent } from './fav/fav.component';
 import { ContactpageComponent } from './contactpage/contactpage.component';
 import { SearchComponent } from './search/search.component';
 import { EmiComponent } from './emi/emi.component';
+import { CatProductComponent } from './cat-product/cat-product.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { EmiComponent } from './emi/emi.component';
     FavComponent,
     ContactpageComponent,
     SearchComponent,
-    EmiComponent
+    EmiComponent,
+    CatProductComponent
   ],
   imports: [
     BrowserModule,
