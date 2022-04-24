@@ -23,14 +23,13 @@ header{
 nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   padding: 0;
 }
-div#navbarSupportedContent{
-   padding: 10px;
+div#navbarSupportedContent {
+  padding: 10px;
 }
-
 header .navbar a{
   font-size: 14px;
   margin: 4px;
-  color: black
+  color: var(--black);
 }
 
 ul li.a:hover i{
@@ -38,7 +37,7 @@ ul li.a:hover i{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: bold;
+
 }
 /* .dropdown-toggle::after {
   display: inline-block;

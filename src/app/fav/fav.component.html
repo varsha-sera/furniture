@@ -1,27 +1,31 @@
 <app-header></app-header>
 <div class="container mt-5">
-  <h5 style="text-align: center; font-weight: bold;">My Wishlist</h5>
+  <h5 style="text-align: center; font-weight: bold;">My WishList</h5>
+
     <div class="card" style=" text-align: center; box-shadow: var(--box-shadow)">
+
       <div class="card-body">
-        <div class="row ">
+
+        <div class="row " *ngFor="let c of products">
+
         <div class="col md-4">
-            <img src="../../assets/Images/bed_1.jpg" class="card-img-top" alt="..."  style="height: 200px; width: 300px;" >
+
+            <img [src]="c.pImage" class="card-img-top" alt="..."  style="height: 200px; width: 300px;" >
+
         </div>
          <div class="col md-4">
-
-          <p class="card-text" >Stanhope Upholsetred Strorage Bed</p>
+          <p class="card-text" >{{c.pDescription}}</p>
           <div class=" row display">
-            <h6 class="col-sm-4" class="mt-3">MRP<span><del style="color: red;">49,000</del></span><span ><i class="fa-solid fa-indian-rupee-sign"></i>39,000</span></h6>
-            <h5 class="col-sm-4" class="mt-3 "></h5>
-            <h4 class="col-sm-4" class="mt-3"><span style="margin-right: 20px;">20%</span> Offers</h4>
-            </div>
+          <h6 class="col-sm-4" class="mt-3">MRP<span><del style="color: red;"></del></span><span ><i class="fa-solid fa-indian-rupee-sign"></i>{{c.pPrice}}</span></h6>
+          <h4 class="col-sm-4" class="mt-3"><span style="margin-right: 20px;"></span>{{c.pOffers}}</h4>
+          <input #index hidden="true" type="numer" [value]="c.index" />
+          </div>
+
          </div>
          <div class="col-md-4 " style="padding: 75px;">
-         <a class="btn btn-primary " style="width: 120px; height: 50px; text-align: center; justify-content: center; font-size: 12px; font-weight: bold; padding: 13px;" (click)="reject()">REMOVE CART</a>
-
+         <a  class="btn btn-primary " style="width: 120px; height: 50px; text-align: center; justify-content: center; font-size: 12px; font-weight: bold; padding: 13px;">REMOVE WhishList</a>
+         
         </div>
       </div>
-      </div>
-    </div>
 
 </div>
