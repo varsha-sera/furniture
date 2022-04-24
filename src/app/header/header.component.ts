@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
   }
   signout(){
     localStorage.removeItem('jwt-token');
-    this.router.navigate(['']);
   }
 
 }
