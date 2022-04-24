@@ -8,8 +8,17 @@
     <div class="form-box">
       <div class="header-text">
           Ragistration Form
-      </div><input [(ngModel)]="name" placeholder="Your Name" type="text"><input [(ngModel)]="email" placeholder="Your Email Address" type="text">
-       <input [(ngModel)]="password" placeholder="Your Password" type="password">
+      </div>
+
+
+      <input [(ngModel)]="name" required #username="ngModel" placeholder="Your Name" type="text">
+      <span class="text-danger" *ngIf="username.errors?.required && username.touched">Name is required</span>
+
+      <input [(ngModel)]="email" required #emailid="ngModel" placeholder="Your Email Address" type="text">
+      <span class="text-danger" *ngIf="emailid.errors?.required && emailid.touched">Email is required</span>
+
+       <input [(ngModel)]="password" required #pass="ngModel" placeholder="Your Password" type="password">
+       <span class="text-danger" *ngIf="pass.errors?.required && pass.touched">Password is required</span>
 
       <input id="terms" type="checkbox"> <label for="terms"></label><span>Agree with <a href="#" style="justify-content: space-around;">Terms &
               Conditions</a>

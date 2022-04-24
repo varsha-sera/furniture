@@ -18,6 +18,17 @@ export class SignupComponent implements OnInit {
       console.log(data);
     });
   }
+<<<<<<< HEAD
+  loginwithGoogle():void{
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
+    .then(result=>{
+      console.log(result);
+      console.log(result.id+" "+result.name);
+      this.router.navigate(['subcategory']);
+    }).catch();
+  }
+=======
+>>>>>>> d20382989df38543579758dff39c32340ac18ae6
   ngOnInit(): void {
   }
 
