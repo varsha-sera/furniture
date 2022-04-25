@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
 import { GoogleLoginProvider } from 'angularx-social-login';
+import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -14,13 +16,15 @@ export class SignupComponent implements OnInit {
   password:any;
   socialAuthService: any;
 
-  constructor(private data:UserService,private router:Router) { }
+
+  constructor(private data:UserService , private router:Router) { }
   signupdata(){
     this.data.userSignUp(this.name,this.email,this.password).subscribe(data=>{
       window.alert("signup successs......");
       console.log(data);
     });
   }
+
   loginwithGoogle():void{
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
     .then((result: { id: string; name: string; })=>{

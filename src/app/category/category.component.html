@@ -2,7 +2,7 @@
   <h1>POPULAR PRODUCT</h1>
   <h5>Check out our latest collections</h5>
   <div class="row justify-content-around" style="width: 80%; margin: auto; margin-bottom: 40px;">
-    <div class="col-md-4 mt-5" *ngFor="let product of products">
+    <div class="col-md-4 mt-5" *ngFor="let product of products" data-aos="slide-right">
       <div class="card" >
         <img [src]="product.pImage" height="170px">
         <div class="card-body">
