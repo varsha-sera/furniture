@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmiService } from '../services/emi.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { EmiService } from '../services/emi.service';
 })
 export class EmiComponent implements OnInit {
 
-  constructor(private emiService:EmiService) { }
+  constructor(private emiService:EmiService,private router:Router) { }
 
   totalPrice:any=0;
   cartItem:any=localStorage.getItem('item-list');
@@ -24,6 +25,7 @@ export class EmiComponent implements OnInit {
     let userId=localStorage.getItem('userId')
     this.emiService.addEmi(intrest,downpayment,this.totalPrice).subscribe(data =>{
       window.alert("Emi Success...");
+      this.router.navigate(['checkoutpage']);
     });
   }
 

@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>EMI Installment</th>
+            <th>Month</th>
+            <th>Interest</th>
+            <th>Total Downpayment</th>
+            <th>Total Remaining</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let emi of emis">
+            <td>{{emi.userId.uname}}</td>
+            <td>{{emi.emiInstallment}}</td>
+            <td>{{emi.emiMonth}}</td>
+            <td>{{emi.emiIntrest}}</td>
+            <td>{{emi.emiDownPayment}}</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+

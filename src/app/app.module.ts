@@ -25,6 +25,10 @@ import { ContactpageComponent } from './contactpage/contactpage.component';
 import { SearchComponent } from './search/search.component';
 import { EmiComponent } from './emi/emi.component';
 import { CatProductComponent } from './cat-product/cat-product.component';
+import { OrderComponent } from './order/order.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
+import { UseremiComponent } from './useremi/useremi.component';
+import { UseremihostoryComponent } from './useremihostory/useremihostory.component';
 
 
 @NgModule({
@@ -49,7 +53,11 @@ import { CatProductComponent } from './cat-product/cat-product.component';
     ContactpageComponent,
     SearchComponent,
     EmiComponent,
-    CatProductComponent
+    CatProductComponent,
+    OrderComponent,
+    OrderhistoryComponent,
+    UseremiComponent,
+    UseremihostoryComponent
   ],
   imports: [
     BrowserModule,

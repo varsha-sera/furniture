@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
@@ -14,6 +15,7 @@ export class SignupComponent implements OnInit {
   email:any;
   password:any;
   socialAuthService: any;
+
 
   constructor(private data:UserService , private router:Router) { }
   signupdata(){
