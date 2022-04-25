@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EmiService } from '../services/emi.service';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router:Router,private data:UserService) { }
+  constructor(private router:Router,private data:UserService,private emiService: EmiService) { }
 
   open(){
     this.router.navigate(['mycart']);
@@ -27,4 +28,8 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('jwt-token');
   }
 
+  open1(){
+    console.log("hello")
+    this.router.navigate(['emihistory']);
+  }
 }

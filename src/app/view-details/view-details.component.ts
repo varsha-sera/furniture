@@ -24,13 +24,26 @@ export class ViewDetailsComponent implements OnInit {
 
   }
 
+  f:boolean = true;
   addCart(pro_id:any){
     let user_id=localStorage.getItem('id');
-    console.log(user_id);
-    this.cartService.addCart(pro_id,user_id).subscribe(data=>{
-      window.alert("Added To Cart...");
-      console.log(data);
-    });
+    let pro:any=localStorage.getItem('item-list');
+    pro = JSON.parse(pro);
+
+    for(let p of pro){
+      if(p._id==pro_id){
+        window.alert("already added");
+        this.f=false;
+        break;
+      }
+    }
+
+    if(this.f)
+    {
+        this.cartService.addCart(pro_id,user_id).subscribe(data=>{
+          window.alert("Added To Cart...");
+        });
+    }
   }
 
   

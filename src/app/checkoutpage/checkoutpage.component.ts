@@ -28,6 +28,7 @@ export class CheckoutpageComponent implements OnInit {
       .placeOrder(mobile, address, email, quantity, amount, emi, this.productId)
       .subscribe((data) => {
         window.alert('Order Placed');
+        this.router.navigate(['order']);
       });
   }
 

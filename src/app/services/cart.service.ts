@@ -13,12 +13,14 @@ export class CartService {
   }
 
   viewCart(is:any) {
-    return this.http.get('https://furniture-v1-app.herokuapp.com/api/cart/view')
+    let userId=localStorage.getItem('id');
+    return this.http.post('https://furniture-v1-app.herokuapp.com/api/cart/view',{uId:userId});
+    //return this.http.post('http://localhost:3000/api/cart/view',{uId:userId});
   }
 
   removeCart(id:any) {
     let userId=localStorage.getItem('id');
-    //return this.http.post('https://furniture-v1-app.herokuapp.com/api/cart/remove',{uId:userId,pId:id});
-    return this.http.post('http://localhost:3000/api/cart/remove',{uId:userId,pId:id});
+    return this.http.post('https://furniture-v1-app.herokuapp.com/api/cart/remove',{uId:userId,pId:id});
+    //return this.http.post('http://localhost:3000/api/cart/remove',{uId:userId,pId:id});
   }
 }
