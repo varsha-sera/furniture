@@ -11,12 +11,6 @@ export class MycartComponent implements OnInit {
 
   constructor(private router:Router,private cartService:CartService) { }
 
-  reject() {
-
-    window.confirm('Are you sure to remove this item ?');
-    
-  }
-
   placeOrder(){
     this.router.navigate(['checkoutpage']);
   }
@@ -45,6 +39,14 @@ export class MycartComponent implements OnInit {
     itemList[id].pro_qty = totalquantity;
     localStorage.setItem("item-list",JSON.stringify(itemList));
     
+  }
+
+  removeCart(id:any){
+    this.cartService.removeCart(id).subscribe(data => {
+      window.alert("REMOVE FROM CART......");
+      console.log(data);
+      this.ngOnInit();
+    });
   }
 
 }
