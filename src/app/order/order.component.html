@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>User Mobile</th>
+            <th>User Email</th>
+            <th>Product Name</th>
+            <th>Product Date</th>
+            <th>Order Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let order of orders">
+            <td>{{order.userId.uname}}</td>
+            <td>{{order.userId.uemail}}</td>
+            <td>{{order.mobileNo}}</td>
+            <td>{{order.productId.pName}}</td>
+            <td>{{order.orderDate}}</td>
+            <td><img [src]="order.productId.pImage" width="100px" height="100px"></td>
+        </tr>
+    </tbody>
+</table>
+

@@ -9,9 +9,13 @@ import { EmiComponent } from './emi/emi.component';
 import { FavComponent } from './fav/fav.component';
 import { HomeComponent } from './home/home.component';
 import { MycartComponent } from './mycart/mycart.component';
+import { OrderComponent } from './order/order.component';
+import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { SubcategoryComponent } from './subcategory/subcategory.component';
+import { UseremiComponent } from './useremi/useremi.component';
+import { UseremihostoryComponent } from './useremihostory/useremihostory.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
@@ -27,7 +31,11 @@ const routes: Routes = [
   {path: 'wishlist',component: FavComponent,canActivate:[AuthGuard]},
   {path : 'subcategory',component:SubcategoryComponent},
   {path : 'emi',component:EmiComponent},
-  {path : 'categories/:catId',component:CatProductComponent}
+  {path : 'categories/:catId',component:CatProductComponent},
+  {path : 'order',component:OrderComponent},
+  {path :  'orderhistory',component:OrderhistoryComponent},
+  {path : 'useremi',component:UseremiComponent},
+  {path : 'emihistory',component:UseremihostoryComponent},
 ];
 
 @NgModule({
